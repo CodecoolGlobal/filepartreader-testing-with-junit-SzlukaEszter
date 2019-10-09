@@ -19,7 +19,7 @@ class FilePartReaderTest {
     @Test
     void readSuccess() throws IOException {
         FilePartReader fp = new FilePartReader();
-        fp.setup("src/test/resources/sample.txt", 1, 3);
+        fp.setup("src/test/resources/sampleAlphabet.txt", 1, 3);
         Assertions.assertEquals("line 1 head\nline 2\nline 3\nline 4\nline 5 end", fp.read());
     }
 
@@ -34,7 +34,7 @@ class FilePartReaderTest {
     void readLines() throws IOException{
         FilePartReader fp = new FilePartReader();
         fp.setup("src/test/resources/sample.txt", 1, 3);
-        Assertions.assertEquals("line 1 head\nline 2", fp.readLines());
+        Assertions.assertEquals("line 1 head\nline 2\nline 3", fp.readLines());
     }
 
     @Test
